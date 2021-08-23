@@ -1,0 +1,6 @@
+// the configured options and settings for Tutorial
+#define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@
+#define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@
+#define CXX_COMPILER_VERSION "@CMAKE_CXX_COMPILER_VERSION@"
+#define CXX_COMPILER_ID "@CMAKE_CXX_COMPILER_ID@"
+#define CXX_COMPILER "@CMAKE_CXX_COMPILER@"
