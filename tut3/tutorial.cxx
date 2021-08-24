@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <stdlib.h>
 #include "TutorialConfig.h"
 
 int main(int argc, char *argv[])
@@ -12,7 +13,7 @@ int main(int argc, char *argv[])
         std::cout << "Usage: " << argv[0] << " number" << std::endl;
         return 2;
     }
-    double inputValue = std::stod(argv[1]);
+    double inputValue = std::strtod(argv[1], nullptr);
     double outputValue = sqrt(inputValue);
     std::cout << "The square root of "
               << inputValue << " is " << outputValue << "\n";
