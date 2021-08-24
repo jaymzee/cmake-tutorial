@@ -14,9 +14,8 @@ int main(int argc, char *argv[])
                   << Tutorial_VERSION_MINOR << " compiled with "
                   << CXX_COMPILER_ID << " " << CXX_COMPILER_VERSION << "\n";
 #ifdef USE_MYMATH
-        std::cout << "    USE_MYMATH=ON" << std::endl;
-#else
-        std::cout << "    USE_MYMATH=OFF" << std::endl;
+        std::cout << "BUILD OPTIONS: " << "USE_MYMATH ";
+        cmake::my::features();
 #endif
         std::cout << "Usage: " << argv[0] << " number" << std::endl;
         return 2;

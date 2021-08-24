@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required (VERSION 2.9)
 project (Tutorial)
 
 # add the subdirectory containing the CMakeLists.txt for the library

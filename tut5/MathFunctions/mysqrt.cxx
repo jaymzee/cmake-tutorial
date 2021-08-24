@@ -1,3 +1,4 @@
+#include <iostream>
 #include <cmath>
 #include "mysqrt.h"
 
@@ -13,4 +14,14 @@ double my::mysqrt (double x)
     return result;
 }
 
+void my::features()
+{
+#ifdef HAVE_LOG
+    std::cout << "HAVE_LOG ";
+#endif
+#ifdef HAVE_EXP
+    std::cout << "HAVE_EXP ";
+#endif
+    std::cout << std::endl;
+}
 }
