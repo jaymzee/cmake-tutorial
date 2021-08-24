@@ -1,3 +1,3 @@
-Adding a version number and configured header file
+Adding a Library
 
-Adding a compiler version string
+optionally include library

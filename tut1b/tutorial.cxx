@@ -1,10 +1,7 @@
 #include <iostream>
+#include <cstdlib>
 #include <cmath>
-#include <stdlib.h>
 #include "TutorialConfig.h"
-#ifdef USE_MYMATH
-#include "mysqrt.h"
-#endif
 
 int main(int argc, char *argv[])
 {
@@ -13,20 +10,11 @@ int main(int argc, char *argv[])
         std::cout << argv[0] << " Version " << Tutorial_VERSION_MAJOR << "."
                   << Tutorial_VERSION_MINOR << " compiled with "
                   << CXX_COMPILER_ID << " " << CXX_COMPILER_VERSION << "\n";
-#ifdef USE_MYMATH
-        std::cout << "    USE_MYMATH=ON" << std::endl;
-#else
-        std::cout << "    USE_MYMATH=OFF" << std::endl;
-#endif
         std::cout << "Usage: " << argv[0] << " number" << std::endl;
         return 2;
     }
-    double inputValue = std::strtod(argv[1], nullptr);
-#ifdef USE_MYMATH
-    double outputValue = cmake::my::mysqrt(inputValue);
-#else
+    double inputValue = atof(argv[1]);
     double outputValue = sqrt(inputValue);
-#endif
     std::cout << "The square root of "
               << inputValue << " is " << outputValue << "\n";
     return 0;
